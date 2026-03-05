@@ -51,9 +51,11 @@ const validationSchema = Yup.object().shape({
   })
 });
 
+const allowed = new Set(['USD', 'VND']);
 const currencies = [
   { id: 'none', label: '', value: '' },
   ...cc.data
+    .filter(({ code }) => allowed.has(code))
     .reduce((acc, { code, currency }) => {
       const symbol = getSymbolFromCurrency(code);
       if (symbol) {
@@ -75,11 +77,8 @@ const currencies = [
 
 const languages = [
   { id: 'none', label: '', value: '' },
-  { id: 'pt-BR', label: 'Brasileiro', value: 'pt-BR' },
-  { id: 'en', label: 'English', value: 'en' },
-  { id: 'fr-FR', label: 'Français (France)', value: 'fr-FR' },
-  { id: 'de-DE', label: 'Deutsch (Deutschland)', value: 'de-DE' },
-  { id: 'es-CO', label: 'Español (Colombia)', value: 'es-CO' }
+  { id: 'vi-VN', label: 'Tiếng Việt', value: 'vi-VN' },
+  { id: 'en', label: 'English', value: 'en' }
 ];
 
 export default function LandlordForm({ organization, firstAccess }) {

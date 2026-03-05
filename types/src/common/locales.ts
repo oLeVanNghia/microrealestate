@@ -1,1 +1,1 @@
-export type Locale = Readonly<['de-DE', 'en', 'fr', 'pt-BR'][number]>;
+export type Locale = Readonly<['vi-VN', 'en'][number]>;

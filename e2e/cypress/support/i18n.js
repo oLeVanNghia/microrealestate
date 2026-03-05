@@ -6,19 +6,10 @@ import i18next, { init } from 'i18next';
       en: {
         translation: require('../../../webapps/landlord/locales/en/common.json')
       },
-      'fr-FR': {
-        translation: require('../../../webapps/landlord/locales/fr-FR/common.json')
-      },
-      'pt-BR': {
-        translation: require('../../../webapps/landlord/locales/pt-BR/common.json')
-      },
-      'de-DE': {
-        translation: require('../../../webapps/landlord/locales/de-DE/common.json')
-      },
-      'es-CO': {
-        translation: require('../../../webapps/landlord/locales/es-CO/common.json')
+      'vi-VN': {
+        translation: require('../../../webapps/landlord/locales/vi-VN/common.json')
       }
-    }
+    },
   });
 })();
 
